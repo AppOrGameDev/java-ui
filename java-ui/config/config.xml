@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JFRAME>
+    <MAIN-JFAME>
+        <TITLE>主窗口</TITLE>
+        <WIDTH>900</WIDTH>
+        <HEIGHT>450</HEIGHT>
+        <LOCATION></LOCATION>
+    </MAIN-JFAME>
+</JFRAME>
