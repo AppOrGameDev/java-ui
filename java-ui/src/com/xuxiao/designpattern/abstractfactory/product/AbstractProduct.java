@@ -41,4 +41,5 @@ public abstract class AbstractProduct implements IProduct{
     public void setNo(Long no) {
         this.no = no;
     }
+
 }

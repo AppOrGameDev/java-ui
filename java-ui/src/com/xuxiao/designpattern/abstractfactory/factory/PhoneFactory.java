@@ -1,6 +1,5 @@
-package com.xuxiao.designpattern.abstractfactory.factory.impl;
+package com.xuxiao.designpattern.abstractfactory.factory;
 
-import com.xuxiao.designpattern.abstractfactory.factory.AbstractFactory;
 import com.xuxiao.designpattern.abstractfactory.product.IProduct;
 import com.xuxiao.designpattern.abstractfactory.product.impl.Phone;
 
@@ -16,13 +15,20 @@ import com.xuxiao.designpattern.abstractfactory.product.impl.Phone;
  * ------------------------------------------------------------
  * 2017/8/29     xuxiao          v1.1.0               修改原因
  */
-public class PhoneFactory extends AbstractFactory{
-    @Override
-    public IProduct generator() {
-        return new Phone();
-    }
-    @Override
-    public IProduct genSingle(){
+public class PhoneFactory {
+    /**
+     * 普通工厂方法
+     */
+    public static IProduct generator(String classImpl) {
+        if(Phone.class.getName().equals(classImpl)){
+            return new Phone();
+        }
+        // TODO: 2017/9/1  扩展产品实例
         return null;
+    }
+
+    public static IProduct genSingle(String classImpl) throws IllegalAccessException, InstantiationException, ClassNotFoundException {
+        IProduct obj = SingleFactory.getInstance(classImpl);
+        return obj;
     }
 }
