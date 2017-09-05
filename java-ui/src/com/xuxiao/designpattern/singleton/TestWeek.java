@@ -19,6 +19,7 @@ public class TestWeek {
 
     public static void main(String[] args) {
         TestWeek test = new TestWeek();
+        test.test01();
         test.test02();
     }
     
