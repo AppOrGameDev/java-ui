@@ -31,16 +31,12 @@ public class Client {
         ClonePerson clonePerson = prototypePerson.clone();
         log.info("原型::"+prototypePerson.toString());
         log.info("克隆::"+clonePerson.toString());
-        log.info("prototypePerson == clonePerson 结果::"+(prototypePerson==clonePerson));
-        log.info("prototypePerson.getId() == clonePerson.getId() 结果::"+(prototypePerson.getId()==clonePerson.getId()));
         clonePerson.setBrithday(new Timestamp(System.currentTimeMillis()));
         clonePerson.getFather().setName("新爸爸");
         clonePerson.getMother().setName("新妈妈");
         log.info("修改克隆人的生日后");
         log.info("原型::"+prototypePerson.toString());
         log.info("克隆::"+clonePerson.toString());
-        log.info("prototypePerson == clonePerson 结果::"+(prototypePerson==clonePerson));
-        log.info("prototypePerson.getId() == clonePerson.getId() 结果::"+(prototypePerson.getId()==clonePerson.getId()));
         /**
          * 修改生日，父母的姓名后可以看到
          * 克隆人的生日改变了，但是原型人的生日没有变；
@@ -55,15 +51,11 @@ public class Client {
         DeepClonePerson clonePerson = prototypePerson.clone();
         log.info("原型::"+prototypePerson.toString());
         log.info("克隆::"+clonePerson.toString());
-        log.info("prototypePerson == clonePerson 结果::"+(prototypePerson==clonePerson));
-        log.info("prototypePerson.getId() == clonePerson.getId() 结果::"+(prototypePerson.getId()==clonePerson.getId()));
         clonePerson.setBrithday(new Timestamp(System.currentTimeMillis()));
         clonePerson.getFather().setName("新爸爸");
         clonePerson.getMother().setName("新妈妈");
         log.info("修改克隆人的生日后");
         log.info("原型::"+prototypePerson.toString());
         log.info("克隆::"+clonePerson.toString());
-        log.info("prototypePerson == clonePerson 结果::"+(prototypePerson==clonePerson));
-        log.info("prototypePerson.getId() == clonePerson.getId() 结果::"+(prototypePerson.getId()==clonePerson.getId()));
     }
 }

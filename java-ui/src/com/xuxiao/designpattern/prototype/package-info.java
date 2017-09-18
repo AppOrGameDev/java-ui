@@ -22,4 +22,10 @@ package com.xuxiao.designpattern.prototype;
  * 2、重写Object的clone方法 （浅拷贝，深拷贝）
  * Object类中有一个clone方法，作用是返回对象的一个拷贝，但是其作用域protected类型的，
  * 一般的类无法调用，因 此，Prototype类需要将clone方法的作用域修改为public类型。
+ *
+ * 3、super.clone() 先分配内存空间，然后将原对象的内部第一层的值复制给新的对象。
+ *
+ * 4、引用是直接将原对象的地址直接赋值给新对象
+ *
+ * 5、深拷贝
  */
